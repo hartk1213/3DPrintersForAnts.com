@@ -3,20 +3,9 @@ site_description: Documentation and community wiki for 3D Printers for Ants
 site_url: https://hartk1213.github.io/3DPrintersForAnts.com/
 
 docs_dir: wiki_src
-site_dir: .
 
 theme:
   name: material
-  language: en
-  features:
-    - navigation.instant
-    - navigation.tabs
-    - navigation.sections
-    - navigation.expand
-    - navigation.top
-    - search.highlight
-    - search.suggest
-    - content.action.edit
 
 repo_url: https://github.com/hartk1213/3DPrintersForAnts.com
 repo_name: hartk1213/3DPrintersForAnts.com
@@ -45,6 +34,3 @@ markdown_extensions:
 
 plugins:
   - search
-
-extra:
-  generator: false
