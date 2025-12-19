@@ -7,6 +7,11 @@ docs_dir: wiki_src
 theme:
   name: readthedocs
 
+extra_css:
+  - css/extra.css
+
+use_directory_urls: true
+
 repo_url: https://github.com/hartk1213/3DPrintersForAnts.com
 repo_name: hartk1213/3DPrintersForAnts.com
 edit_uri: edit/main/wiki_src/
