@@ -1,0 +1,36 @@
+name: Build Wiki
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - "mkdocs.yml"
+      - "wiki_src/**"
+      - ".github/workflows/build-wiki.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - run: pip install mkdocs-material
+
+      - run: mkdocs build --clean
+
+      - name: Commit generated site
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: "."
+          message: "Build wiki"
+          default_author: github_actions
