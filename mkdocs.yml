@@ -41,4 +41,10 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.inlinehilite
-  - p
+  - pymdownx.highlight
+
+plugins:
+  - search
+
+extra:
+  generator: false
