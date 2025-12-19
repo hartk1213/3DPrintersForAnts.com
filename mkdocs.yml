@@ -5,7 +5,7 @@ site_url: https://hartk1213.github.io/3DPrintersForAnts.com/
 docs_dir: wiki_src
 
 theme:
-  name: material
+  name: nature
 
 repo_url: https://github.com/hartk1213/3DPrintersForAnts.com
 repo_name: hartk1213/3DPrintersForAnts.com
