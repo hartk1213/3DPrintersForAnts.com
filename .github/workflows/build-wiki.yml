@@ -22,6 +22,6 @@ jobs:
         with:
           python-version: "3.x"
 
-      - run: pip install mkdocs-nature pymdown-extensions
+      - run: pip install mkdocs-readthedocs pymdown-extensions
 
       - run: mkdocs gh-deploy --force
