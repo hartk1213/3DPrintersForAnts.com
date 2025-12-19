@@ -1,17 +1,15 @@
-# 3dprintersforants.com
+# 3D Printers for Ants Wiki
 
-This is the repo for the website https://3dprintersforants.com/ which provides a landing page for all the tiny Voron-inspired printer designs folks have been working on.
+Welcome to the official **3D Printers for Ants** documentation wiki.
 
-Printers covered currently include:
+This site contains build guides, specifications, mods, and community resources
+for compact and experimental 3D printers developed under the PFA ecosystem.
 
-- [Dueling Zero](https://github.com/zruncho3d/DuelingZero)
-- [Double Dragon](https://github.com/zruncho3d/double-dragon)
-- [Crucible](https://github.com/Maverick-3D/Crucible)
-- [F-Zero](https://github.com/zruncho3d/f-zero)
-- [Tri-Zero](https://github.com/zruncho3d/tri-zero)
-- [Pandora's Box](https://github.com/masturmynd/pandoras_box)
-- [Hex-Zero](https://github.com/Alexander-T-Moss/Hex-Zero)
-- [Micron](https://github.com/hartk1213/Micron)
-- [Salad Fork](https://github.com/Yeriwyn/Salad_Fork)
-- [Tiny-M](https://github.com/gsl12/Tiny-M)
-- [Tiny-T](https://github.com/PrintersForAnts/TinyT)
+## What you’ll find here
+- Printer specifications and variants
+- Mods, upgrades, and toolheads
+- BOMs and sourcing notes
+- Community-contributed improvements
+
+All documentation is maintained openly on GitHub.
+
