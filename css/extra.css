@@ -1,0 +1,284 @@
+/* ------------------------------------------------------------
+   3DPrintersForAnts / Micron-inspired theme for MkDocs ReadTheDocs
+   Fonts:
+     - Headers: "Play"
+     - Body: "Nunito"
+   ------------------------------------------------------------ */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Nunito:wght@300;400;600;700&display=swap');
+
+/* --- Palette (tuned to the Micron cover) --- */
+:root{
+  --pfa-bg: #15181c;          /* deep charcoal */
+  --pfa-bg-2: #1d2127;        /* nav charcoal */
+  --pfa-panel: #232832;       /* panels/cards */
+  --pfa-text: #e7eaee;        /* main text */
+  --pfa-muted: #aab2bd;       /* secondary text */
+
+  --pfa-green: #55ac42;       /* Micron green (primary) */
+  --pfa-green-2: #74d65a;     /* brighter accent */
+  --pfa-green-3: #2bdc5f;     /* neon pop for hovers */
+  --pfa-line: rgba(116,214,90,.25);
+
+  --pfa-code-bg: #0f1216;
+  --pfa-code-line: rgba(116,214,90,.18);
+
+  --pfa-radius: 10px;
+}
+
+/* --- Base typography --- */
+html, body,
+.wy-body-for-nav,
+.wy-nav-content,
+.rst-content {
+  font-family: "Nunito", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--pfa-text);
+}
+
+h1, h2, h3, h4, h5, h6,
+.wy-nav-top a,
+.wy-side-nav-search > a,
+.caption-text {
+  font-family: "Play", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  letter-spacing: .2px;
+}
+
+/* --- Page background + content area --- */
+body {
+  background: var(--pfa-bg);
+}
+
+.wy-nav-content {
+  background: var(--pfa-bg);
+}
+
+.wy-nav-content-wrap {
+  background: var(--pfa-bg);
+}
+
+/* Content max width (optional) */
+.wy-nav-content {
+  max-width: 1080px;
+}
+
+/* --- Top bar (mobile) --- */
+.wy-nav-top {
+  background: linear-gradient(135deg, var(--pfa-green) 0%, var(--pfa-green-2) 100%);
+  color: #0c0f12;
+}
+.wy-nav-top a {
+  color: #0c0f12 !important;
+}
+
+/* --- Left sidebar --- */
+.wy-nav-side {
+  background: var(--pfa-bg-2);
+  border-right: 1px solid var(--pfa-line);
+}
+
+/* Sidebar search area */
+.wy-side-nav-search {
+  background: linear-gradient(135deg, rgba(85,172,66,.35) 0%, rgba(116,214,90,.18) 100%);
+  border-bottom: 1px solid var(--pfa-line);
+}
+
+.wy-side-nav-search input[type="text"] {
+  border-radius: var(--pfa-radius);
+  border: 1px solid rgba(116,214,90,.35);
+  background: rgba(15,18,22,.75);
+  color: var(--pfa-text);
+}
+.wy-side-nav-search input::placeholder {
+  color: rgba(231,234,238,.65);
+}
+
+/* --- Sidebar links --- */
+.wy-menu-vertical a {
+  color: var(--pfa-text);
+}
+.wy-menu-vertical a:hover {
+  background: rgba(116,214,90,.12);
+  color: var(--pfa-green-2);
+}
+.wy-menu-vertical li.current > a,
+.wy-menu-vertical li.current > a:hover {
+  background: rgba(85,172,66,.16);
+  border-right: 3px solid var(--pfa-green-2);
+  color: var(--pfa-green-2);
+}
+
+/* Expand/collapse caret + section headers */
+.wy-menu-vertical p.caption {
+  color: var(--pfa-green-2);
+}
+.wy-menu-vertical li.toctree-l1.current > a {
+  border-top: 1px solid rgba(116,214,90,.12);
+  border-bottom: 1px solid rgba(116,214,90,.12);
+}
+
+/* --- Main content styling --- */
+.rst-content h1 {
+  color: var(--pfa-green-2);
+  border-bottom: 1px solid var(--pfa-line);
+  padding-bottom: .35rem;
+}
+.rst-content h2 {
+  color: var(--pfa-text);
+  border-left: 4px solid var(--pfa-green);
+  padding-left: .6rem;
+}
+.rst-content h3 {
+  color: var(--pfa-text);
+}
+
+/* Links */
+.rst-content a,
+.wy-breadcrumbs a {
+  color: var(--pfa-green-2);
+  text-decoration: none;
+}
+.rst-content a:hover,
+.wy-breadcrumbs a:hover {
+  color: var(--pfa-green-3);
+  text-decoration: underline;
+}
+
+/* --- “Card-like” styling for admonitions (notes/warnings) --- */
+.rst-content .admonition,
+.rst-content .note,
+.rst-content .warning,
+.rst-content .tip,
+.rst-content .important {
+  border-radius: var(--pfa-radius);
+  border: 1px solid rgba(116,214,90,.25);
+  background: rgba(35,40,50,.55);
+  box-shadow: 0 8px 22px rgba(0,0,0,.25);
+}
+.rst-content .admonition-title {
+  font-family: "Play", sans-serif;
+  background: rgba(85,172,66,.18) !important;
+  color: var(--pfa-text) !important;
+  border-bottom: 1px solid rgba(116,214,90,.20);
+}
+
+/* --- Code blocks --- */
+.rst-content pre,
+.rst-content code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
+
+.rst-content pre {
+  background: var(--pfa-code-bg);
+  border: 1px solid var(--pfa-code-line);
+  border-radius: var(--pfa-radius);
+}
+
+.rst-content code {
+  background: rgba(15,18,22,.65);
+  border: 1px solid rgba(116,214,90,.18);
+  border-radius: 6px;
+  padding: 0 .25em;
+  color: var(--pfa-text);
+}
+
+/* --- Tables --- */
+.rst-content table.docutils {
+  border-radius: var(--pfa-radius);
+  overflow: hidden;
+  border: 1px solid rgba(116,214,90,.18);
+}
+.rst-content table.docutils thead th {
+  background: rgba(85,172,66,.18);
+  color: var(--pfa-text);
+}
+.rst-content table.docutils tbody tr:nth-child(odd) {
+  background: rgba(35,40,50,.35);
+}
+
+/* --- Footer / breadcrumbs --- */
+.wy-breadcrumbs,
+.wy-breadcrumbs-aside {
+  color: var(--pfa-muted);
+}
+footer {
+  color: var(--pfa-muted);
+}
+
+/* --- Optional: reduce the “ReadTheDocs” bright whites --- */
+.wy-nav-content,
+.rst-content {
+  color: var(--pfa-text);
+}
+
+/* ===== Better "current page" highlight in the left nav ===== */
+
+/* The white bar on the currently selected page */
+.wy-menu-vertical li.current > a,
+.wy-menu-vertical li.current > a:hover,
+.wy-menu-vertical li.toctree-l1.current > a,
+.wy-menu-vertical li.toctree-l2.current > a,
+.wy-menu-vertical li.toctree-l3.current > a {
+  background: rgba(85, 172, 66, 0.16) !important;   /* green-tinted */
+  color: #000000 !important;                        /* light text */
+  border-right: 3px solid var(--pfa-green-2) !important;
+  border-left: 1px solid rgba(116, 214, 90, 0.18) !important;
+}
+
+/* Remove any default light borders that make it look "boxed" */
+.wy-menu-vertical li.current > a {
+  box-shadow: inset 0 0 0 1px rgba(116, 214, 90, 0.12) !important;
+}
+
+/* Slight hover, without turning white */
+.wy-menu-vertical a:hover {
+  background: rgba(116, 214, 90, 0.10) !important;
+  color: var(--pfa-green-2) !important;
+}
+
+/* Make the "current" section children blend nicely */
+.wy-menu-vertical li.current ul {
+ /* background: rgba(0, 0, 0, 0.10) !important; */
+  border-left: 1px solid rgba(116, 214, 90, 0.12) !important;
+}
+.wy-menu-vertical li.current > a {
+  border-radius: 8px 0 0 8px !important;
+  margin-left: 6px !important;
+  margin-right: 0 !important;
+}
+/* ===== Fix expanded submenu background (remove white/gray blocks) ===== */
+
+/* The expanded child list background */
+.wy-menu-vertical li.current > ul,
+.wy-menu-vertical li.toctree-l1.current > ul,
+.wy-menu-vertical li.toctree-l2.current > ul {
+  background: rgba(20, 24, 30, 0.95) !important; /* dark panel */
+  border-left: 2px solid rgba(116, 214, 90, 0.25);
+  padding-left: 6px;
+}
+
+/* Child links (Overview / Specs / BOM) */
+.wy-menu-vertical li.current ul a {
+  background: transparent !important;
+  color: var(--pfa-text) !important;
+  padding-left: 1.2rem;
+}
+
+/* Hover state for child links */
+.wy-menu-vertical li.current ul a:hover {
+  background: rgba(116, 214, 90, 0.12) !important;
+  color: var(--pfa-green-2) !important;
+}
+
+/* Currently selected child page */
+.wy-menu-vertical li.current ul li.current > a {
+  background: rgba(85, 172, 66, 0.20) !important;
+  color: var(--pfa-text) !important;
+  border-left: 3px solid var(--pfa-green-2);
+  border-radius: 6px;
+}
+
+/* Kill any leftover light borders */
+.wy-menu-vertical li.current ul {
+  box-shadow: none !important;
+}
