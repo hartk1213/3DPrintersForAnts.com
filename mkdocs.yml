@@ -1,0 +1,44 @@
+site_name: 3D Printers for Ants Wiki
+site_description: Documentation and community wiki for 3D Printers for Ants
+site_url: https://hartk1213.github.io/3DPrintersForAnts.com/
+
+docs_dir: wiki_src
+site_dir: .
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.action.edit
+
+repo_url: https://github.com/hartk1213/3DPrintersForAnts.com
+repo_name: hartk1213/3DPrintersForAnts.com
+edit_uri: edit/main/wiki_src/
+
+nav:
+  - Home: index.md
+  - Printers:
+      - Overview: printers/index.md
+      - Micron:
+          - Overview: printers/micron/index.md
+          - Specifications: printers/micron/specs.md
+          - Bill of Materials: printers/micron/bom.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - p
